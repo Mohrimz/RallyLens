@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Trained weights and datasets live on Google Drive, not in git
+*.pth
+*.pt
+*.onnx
+*.zip
+models/
+model23/
+Dataset/
+ShuttleSet22/
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Frontend build output (also covered by frontend/.gitignore)
+node_modules/
+.next/
+*.tsbuildinfo
+
+# Local environment, editors and OS files
+.env
+.env.local
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
