@@ -60,16 +60,13 @@ Club and academy coaches film matches with one camera and review them on a lapto
 
 ## Screenshots
 
-<table>
-  <tr>
-    <td width="68%"><img src="docs/images/app_home_online.jpg" alt="RallyLens home screen with the model online"></td>
-    <td><img src="docs/images/app_mobile.png" alt="RallyLens on a phone-sized screen"></td>
-  </tr>
-  <tr>
-    <td><em>Home screen with the model online</em></td>
-    <td><em>Responsive layout (captured without a backend, hence "Offline")</em></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="docs/images/app_home_online.jpg" alt="RallyLens home screen with the model online" height="340">
+  &nbsp;
+  <img src="docs/images/app_mobile.png" alt="RallyLens on a phone-sized screen" height="340">
+</p>
+
+<p align="center"><em>Home screen with the model online, and the responsive phone layout (captured without a backend, hence "Offline")</em></p>
 
 <img src="docs/images/gradcam_why_cards.png" alt="Grad-CAM why-cards for one held-out clip of each stroke class">
 
@@ -103,22 +100,22 @@ Models are trained in Google Colab notebooks and stored on Google Drive. The API
 
 <table>
   <tr>
-    <td><img src="docs/images/confusion_matrix_video.png" alt="Stroke classifier confusion matrix"></td>
-    <td><img src="docs/images/reliability_diagram.png" alt="Reliability diagram before and after temperature scaling"></td>
+    <td width="50%"><img src="docs/images/confusion_matrix_video.png" alt="Stroke classifier confusion matrix"></td>
+    <td width="50%"><img src="docs/images/label_efficiency.png" alt="Label-efficiency curve"></td>
   </tr>
   <tr>
     <td><em>Stroke classifier on 732 held-out clips: 696 correct. The main confusion is Lift vs Clear.</em></td>
-    <td><em>Calibration: ECE 0.024 out of the box. Temperature scaling made it slightly worse (0.031), so I kept the raw probabilities.</em></td>
-  </tr>
-  <tr>
-    <td><img src="docs/images/quantization_fp32_vs_int8.png" alt="FP32 vs INT8 latency, size and accuracy"></td>
-    <td><img src="docs/images/label_efficiency.png" alt="Label-efficiency curve"></td>
-  </tr>
-  <tr>
-    <td><em>INT8 post-training quantization: 3.9× faster on CPU and 4× smaller for one point of accuracy.</em></td>
     <td><em>Label efficiency: half the labels give 94% of full macro-F1.</em></td>
   </tr>
 </table>
+
+<img src="docs/images/quantization_fp32_vs_int8.png" alt="FP32 vs INT8 latency, size and accuracy">
+
+*INT8 post-training quantization: 3.9× faster on CPU and 4× smaller for one point of accuracy.*
+
+<img src="docs/images/reliability_diagram.png" alt="Reliability diagram before and after temperature scaling">
+
+*Calibration: ECE 0.024 out of the box. Temperature scaling made it slightly worse (0.031), so I kept the raw probabilities.*
 
 Across the 8 held-out sessions, accuracy ranged from 88.3% to 98.7% (mean 95.0%). Full tables, learning curves, baselines and tuning results are in [docs/RESULTS.md](docs/RESULTS.md).
 

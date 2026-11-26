@@ -6,7 +6,7 @@ RallyLens has three parts:
 - **Colab notebooks** that train and evaluate the models and store the checkpoints on Google Drive.
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph B["Browser: Next.js 14 dashboard"]
         UI["Upload zone + result cards"]
         ST[("Rally history (React state)<br/>API URL (localStorage)")]
