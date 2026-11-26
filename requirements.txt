@@ -1,0 +1,13 @@
+# Dependencies for the training and inference scripts in src/.
+# The Colab notebooks install what they need in their first cell,
+# and the API has its own list in backend/requirements.txt.
+torch>=2.0
+torchvision>=0.15
+opencv-python-headless>=4.8
+numpy>=1.24
+pandas
+scikit-learn
+scipy
+matplotlib
+seaborn
+streamlit   # optional: src/app.py demo
